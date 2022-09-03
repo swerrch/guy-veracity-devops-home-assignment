@@ -1,1 +1,1 @@
-# guy-vercity-devops-home-assignment
+# guy-veracity-devops-home-assignment

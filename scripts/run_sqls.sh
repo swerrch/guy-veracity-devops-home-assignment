@@ -1,5 +1,6 @@
 #/bin/bash!
 
+
 ENTRY_PATH='/docker-entrypoint-initdb.d'
 POOL_CONF_PATH='/opt/bitnami/pgpool/conf'
 

@@ -5,7 +5,7 @@
       "Group": "Server Group 1",
       "Port": 5432,
       "Username": "rw_user",
-      "Host": "repmgr-pgpool-1",
+      "Host": "pgpool",
       "SSLMode": "prefer",
       "MaintenanceDB": "customdatabase"
     },
@@ -14,7 +14,7 @@
       "Group": "Server Group 1",
       "Port": 5432,
       "Username": "ro_user",
-      "Host": "repmgr-pgpool-1",
+      "Host": "pgpool",
       "SSLMode": "prefer",
       "MaintenanceDB": "customdatabase"
     }

@@ -11,5 +11,3 @@ PGPASSWORD=adminpassword psql -d postgres -U postgres -h localhost -f $ENTRY_PAT
 pg_enc -m -f $POOL_CONF_PATH/pgpool.conf -k $POOL_CONF_PATH/.pgpoolkey -i $ENTRY_PATH/users.txt
 
 pgpool -f $POOL_CONF_PATH/pgpool.conf  -k $POOL_CONF_PATH/.pgpoolkey -a $POOL_CONF_PATH/pool_hba.conf reload
-
-# PGPASSWORD=adminpassword psql -d postgres -U postgres -h localhost -c "select usename || ':' || passwd from pg_shadow;" | grep : | xargs -l > $POOL_CONF_PATH/pool_passwd

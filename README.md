@@ -18,3 +18,19 @@ or
 ```bash
 docker-compose up -d
 ```
+## pgAdmin
+to login to the web client enter the following credentials:
+```
+user: admin@admin.com
+password: root
+```
+You will find two preconfigured connections:
+```
+READ-WRITE:
+  user: rw_user
+  pass: rw_user
+
+READ-ONLY:
+  user: ro_user
+  pass: ro_user
+```

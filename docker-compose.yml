@@ -45,17 +45,22 @@ services:
       - 5432:5432
     env_file:
       - ./conf/pgpool.env
-    volumes:
-      - ./scripts/sql/create_ro_user.sql:/docker-entrypoint-initdb.d/create_ro_user.sql
-      - ./scripts/sql/create_rw_user.sql:/docker-entrypoint-initdb.d/create_rw_user.sql
-      - ./scripts/users.txt:/docker-entrypoint-initdb.d/users.txt
-      - ./scripts/run_sqls.sh:/opt/bitnami/run_sqls.sh
     healthcheck:
       test: ["CMD", "/opt/bitnami/scripts/pgpool/healthcheck.sh"]
       interval: 10s
       timeout: 5s
       retries: 5
     depends_on:
+      - pg-0
+      - pg-1
+      - pg-2
+
+  py_script:
+    build: ./scripts
+    container_name: py_script
+    restart: on-failure
+    depends_on:
+      - pgpool
       - pg-0
       - pg-1
       - pg-2

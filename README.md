@@ -10,7 +10,7 @@ localhost:5050
 ## Deploy
 #### Requirments:
   - Docker
-For deploying the cluster clone the repo and execute:
+#### For deploying the cluster clone the repo and execute:
 ```bash
 docker-compose up
 ```

@@ -1,2 +1,0 @@
-ro_user:ro_user
-rw_user:rw_user
